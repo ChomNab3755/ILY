@@ -1,103 +1,14 @@
-/* General reset for margins and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
+  background-color: #000;
+  margin: 0;
+  overflow: hidden;
+  background-repeat: no-repeat;
 }
-
-/* Responsive container for the neon text */
-.neon-text {
-    text-align: center;
-    width: 100%;
-    padding: 0 20px; /* Add some padding to avoid touching the edges */
-}
-
-.neon-text h1 {
-    font-size: 10vw; /* Use vw (viewport width) to make the text responsive */
-    color: white;
-    text-shadow: 
-        0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 20px #ff00ff,
-        0 0 30px #ff00ff,
-        0 0 40px #ff00ff,
-        0 0 50px #ff00ff;
-    margin-bottom: 5vw;
-}
-
-.heart {
-    position: relative;
-    width: 30vw;  /* Responsive width */
-    height: 30vw; /* Responsive height */
-    margin: 0 auto 5vw;
-}
-
-.heart::before, .heart::after {
-    content: "";
-    position: absolute;
-    width: 30vw;
-    height: 30vw;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #00f, #f0f);
-    animation: neonGlow 2s infinite alternate;
-}
-
-.heart::before {
-    left: 15vw;
-    top: 0;
-}
-
-.heart::after {
-    left: 0;
-    top: 15vw;
-}
-
-/* Keyframe animation for neon glow effect */
-@keyframes neonGlow {
-    from {
-        box-shadow: 
-            0 0 10px #fff,
-            0 0 20px #00f,
-            0 0 30px #f0f,
-            0 0 40px #f0f,
-            0 0 50px #f0f;
-    }
-    to {
-        box-shadow: 
-            0 0 20px #f0f,
-            0 0 30px #00f,
-            0 0 40px #fff,
-            0 0 50px #fff;
-    }
-}
-
-/* Media Query for smaller screens */
-@media (max-width: 600px) {
-    .neon-text h1 {
-        font-size: 15vw;
-    }
-    .heart {
-        width: 40vw;
-        height: 40vw;
-    }
-    .heart::before, .heart::after {
-        width: 40vw;
-        height: 40vw;
-    }
-    .heart::before {
-        left: 20vw;
-    }
-    .heart::after {
-        top: 20vw;
-    }
+.text {
+  position: absolute;
+  color: white;
+  left: 44%;
+  top: 35%;
+  z-index: 100;
+  font-size: 3rem;
 }
